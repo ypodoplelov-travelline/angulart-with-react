@@ -1,0 +1,1 @@
+export { makeAutoObservable } from 'mobx'

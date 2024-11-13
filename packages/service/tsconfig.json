@@ -1,0 +1,10 @@
+{
+  "extends": "@repo/ts-config/base.json",
+  "include": ["."],
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "dom.iterable", "esnext"]
+  },
+  "exclude": ["dist", "build", "node_modules"]
+}

@@ -1,22 +1,25 @@
-# Multi-file with multiple nested components (React root component)
+# Eat frog
 
-## DOM structure
+Project based on:
 
+- [pnpm workspaces](https://pnpm.io/workspaces)
+- [Turborepo](https://turbo.build/repo/docs)
+
+## Local Development only
+
+### Preparations
+
+- Install [pnpm](https://pnpm.io/installation)
+- Run command `pnpm install` in the project root directory to install dependencies
+- Create `.env.development.local` where all the env variables for local development will be stored (see the full list in the end)
+
+### Start client
+
+```bash
+pnpm dev
 ```
-#App            Top level container
-  One           Angular component
-    Two         React component
-      Three     Angular component
-        Four    React component
-```
 
-## Running it
-
-```sh
-git clone git@github.com:bcherny/angular2react-demos.git
-cd angular2react-demos/multi-file
-yarn
-yarn run build
-yarn run start
-# open https://localhost:9000 in a browser
+update deps
+```bash
+pnpm up -i --latest -r
 ```

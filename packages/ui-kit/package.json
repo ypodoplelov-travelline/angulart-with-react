@@ -1,0 +1,51 @@
+{
+  "name": "@repo/ui-kit",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "types": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    "./ui-kit.base.css": "./src/ui-kit.base.css",
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "types": "tsc",
+    "storybook": "pnpm dev",
+    "check-types": "tsc --noEmit",
+    "clean": "rimraf ./dist ./turbo",
+    "clean:node_modules": "rimraf ./node_modules",
+    "update-package": "node update-package.js",
+    "rebuild-icons": "tsx rebuild-icons.ts",
+    "build": "pnpm rebuild-icons && tsup",
+    "dev:setup": "pnpm rebuild-icons",
+    "dev": "tsup --watch --onSuccess \"pnpm rebuild-icons\"",
+    "test:unit": "repo-unit",
+    "lint": "TIMING=1 eslint src --fix"
+  },
+  "devDependencies": {
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/ts-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/unit-test": "workspace:*",
+    "@storybook/react": "8.3.0",
+    "@types/react": "~18.2.0",
+    "@types/react-dom": "~18.2.0",
+    "@types/react-transition-group": "^4.4.11",
+    "esbuild-plugin-svgr": "^2.1.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "6.0.1"
+  },
+  "dependencies": {
+    "@repo/date": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-transition-group": "^4.4.5"
+  }
+}

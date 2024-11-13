@@ -1,0 +1,13 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "0.1.1",
+  "main": "tailwind.config.ts",
+  "sideEffects": false,
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10",
+    "tailwindcss-animate": "1.0.7",
+    "@tailwindcss/typography": "0.5.15"
+  }
+}

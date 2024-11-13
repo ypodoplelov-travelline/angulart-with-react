@@ -1,0 +1,44 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env", ".env.development", ".env.production"],
+  "globalPassThroughEnv": ["VITE_BASE_URL"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "build/**", ".cache"]
+    },
+    "clean": {
+      "cache": false,
+      "dependsOn": ["^clean"]
+    },
+    "clean:node_modules": {
+      "cache": false,
+      "dependsOn": ["^clean:node_modules"]
+    },
+    "check-types": {
+      "cache": false
+    },
+    "test:unit": {
+      "cache": false,
+      "outputs": [],
+      "dependsOn": ["@repo/result#build", "@repo/date#build"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "cache": false
+    },
+    "prisma:migrate": {
+      "cache": false
+    },
+    "codegen": {
+      "cache": false
+    },
+    "storybook": {
+      "cache": false,
+      "dependsOn": ["@repo/date#build"]
+    }
+  }
+}
