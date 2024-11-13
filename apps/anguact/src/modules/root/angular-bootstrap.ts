@@ -16,10 +16,10 @@ angular
   .component('twoAngular', TwoAngular)
   .component('threeAngular', ThreeAngular)
   .component('fourAngular', FourAngular)
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
   .run([
     '$injector',
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     function (_$injector) {
       lazyInjector.$injector = _$injector
       reactBootstrap()
