@@ -1,0 +1,17 @@
+{
+  "extends": "@repo/ts-config/react-app.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@arched-client/*": ["./src/modules/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@public/*": ["./public/*"]
+    }
+  },
+  "types": ["vite/client"],
+
+  "include": ["src", "vite.config.ts", "tailwind.config.ts", "modules.d.ts"],
+  "exclude": ["node_modules", ".cache"]
+}
