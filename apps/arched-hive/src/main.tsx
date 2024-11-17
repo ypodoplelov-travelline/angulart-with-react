@@ -1,12 +1,3 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { renderApp } from '@arched-client/app/interface/render-app'
 
-import App from './App'
-
-import './index.css'
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+renderApp()

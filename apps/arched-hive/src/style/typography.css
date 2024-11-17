@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Eat_frog_font';
+  src:
+    url('@public/fonts/Jost-VariableFont_wght.ttf') format('truetype supports variations'),
+    url('@public/fonts/Jost-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}

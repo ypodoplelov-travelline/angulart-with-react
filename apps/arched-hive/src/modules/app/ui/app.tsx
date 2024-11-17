@@ -1,8 +1,11 @@
-import { CheckoutPage } from '@arched-client/checkout-page/ui/checkout-page'
-import { HotelsPage } from '@arched-client/hotel-page/ui/hotels-page'
+import { CheckoutPage } from '@arched-client/page-checkout/ui/checkout-page'
+import { HotelsPage } from '@arched-client/page-create-booking/ui/hotels-page'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-function App() {
+import '@repo/ui-kit/ui-kit.base.css'
+import '../../../style/globals.css'
+
+export function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
@@ -14,5 +17,3 @@ function App() {
     </Router>
   )
 }
-
-export default App

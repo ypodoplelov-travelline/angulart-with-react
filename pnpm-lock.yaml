@@ -142,6 +142,9 @@ importers:
       '@repo/service':
         specifier: workspace:*
         version: link:../../packages/service
+      '@repo/ui-kit':
+        specifier: workspace:*
+        version: link:../../packages/ui-kit
       date-fns:
         specifier: ^3.3.1
         version: 3.6.0
