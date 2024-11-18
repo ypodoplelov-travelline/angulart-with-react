@@ -20,11 +20,10 @@
     "@repo/errors": "workspace:*",
     "@repo/result": "workspace:*",
     "@repo/service": "workspace:*",
+    "@repo/render-bridge": "workspace:*",
     "angular": "1.8.3",
-    "angular2react": "3.0.2",
     "react": "~18.2.0",
-    "react-dom": "~18.2.0",
-    "react2angular": "4.0.6"
+    "react-dom": "~18.2.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

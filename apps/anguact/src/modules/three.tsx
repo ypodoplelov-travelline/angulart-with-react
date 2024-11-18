@@ -1,4 +1,4 @@
-import { angular2react } from 'angular2react'
+import { angular2react } from '@repo/render-bridge'
 
 import { lazyInjector } from './root/lazy-injector'
 

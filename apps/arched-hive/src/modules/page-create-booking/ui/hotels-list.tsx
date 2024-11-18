@@ -1,7 +1,7 @@
 import { HotelStore } from '@arched-client/hotels/interface/hotel-store'
 import { HotelCard } from '@arched-client/hotels/ui/hotel-card'
 import { useInject } from '@arched-client/service/interface/use-inject'
-import { observer } from 'mobx-react-lite'
+import { observer } from '@repo/service'
 import { useNavigate } from 'react-router-dom'
 
 export const HotelsList = observer(() => {

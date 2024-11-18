@@ -1,1 +1,3 @@
-import './root/angular-bootstrap'
+import { renderApp } from '@bf-client/root/render-app'
+
+renderApp()

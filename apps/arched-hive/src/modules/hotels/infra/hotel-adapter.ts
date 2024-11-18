@@ -1,12 +1,16 @@
 import { type BookingFilters } from '@arched-client/filters/core/filters.value-object'
 import { type HotelEntity } from '@arched-client/hotels/core/hotel-entity'
-import { type Result, resultOk } from '@repo/result'
+import { type Result, resultErr, resultOk } from '@repo/result'
 
 import { hotels as mockHotels } from './mockData'
 
 class HotelAdapter {
   async getAllHotels(): Promise<Result<HotelEntity[]>> {
-    return resultOk(mockHotels)
+    try {
+      return resultOk(mockHotels)
+    } catch (e) {
+      return resultErr('unexpected')
+    }
   }
 
   async getHotelById(id: string): Promise<Result<HotelEntity | undefined>> {

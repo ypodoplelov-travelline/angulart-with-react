@@ -72,6 +72,9 @@ importers:
       '@repo/errors':
         specifier: workspace:*
         version: link:../../packages/errors
+      '@repo/render-bridge':
+        specifier: workspace:*
+        version: link:../../packages/render-bridge
       '@repo/result':
         specifier: workspace:*
         version: link:../../packages/result
@@ -84,18 +87,12 @@ importers:
       angular:
         specifier: 1.8.3
         version: 1.8.3
-      angular2react:
-        specifier: 3.0.2
-        version: 3.0.2(@types/angular@1.8.9)(@types/react-dom@18.2.25)(@types/react@18.2.79)(angular@1.8.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react:
         specifier: ~18.2.0
         version: 18.2.0
       react-dom:
         specifier: ~18.2.0
         version: 18.2.0(react@18.2.0)
-      react2angular:
-        specifier: 4.0.6
-        version: 4.0.6(@types/angular@1.8.9)(@types/prop-types@15.7.13)(@types/react-dom@18.2.25)(@types/react@18.2.79)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -145,21 +142,18 @@ importers:
       '@repo/ui-kit':
         specifier: workspace:*
         version: link:../../packages/ui-kit
-      date-fns:
-        specifier: ^3.3.1
-        version: 3.6.0
       lucide-react:
         specifier: ^0.344.0
-        version: 0.344.0(react@18.3.1)
+        version: 0.344.0(react@18.2.0)
       react:
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ~18.2.0
+        version: 18.2.0
       react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
+        specifier: ~18.2.0
+        version: 18.2.0(react@18.2.0)
       react-router-dom:
         specifier: ^6.22.3
-        version: 6.28.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 6.28.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -171,11 +165,11 @@ importers:
         specifier: workspace:*
         version: link:../../configs/ts
       '@types/react':
-        specifier: ^18.3.5
-        version: 18.3.12
+        specifier: ~18.2.0
+        version: 18.2.79
       '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.1
+        specifier: ~18.2.0
+        version: 18.2.25
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.3(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))
@@ -190,16 +184,16 @@ importers:
         version: 3.6.0
       lucide-react:
         specifier: ^0.344.0
-        version: 0.344.0(react@18.3.1)
+        version: 0.344.0(react@18.2.0)
       react:
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ~18.2.0
+        version: 18.2.0
       react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
+        specifier: ~18.2.0
+        version: 18.2.0(react@18.2.0)
       react-router-dom:
         specifier: ^6.22.3
-        version: 6.28.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 6.28.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -211,11 +205,11 @@ importers:
         specifier: workspace:*
         version: link:../../configs/ts
       '@types/react':
-        specifier: ^18.3.5
-        version: 18.3.12
+        specifier: ~18.2.0
+        version: 18.2.79
       '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.1
+        specifier: ~18.2.0
+        version: 18.2.25
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.3(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))
@@ -230,16 +224,16 @@ importers:
         version: 3.6.0
       lucide-react:
         specifier: ^0.344.0
-        version: 0.344.0(react@18.3.1)
+        version: 0.344.0(react@18.2.0)
       react:
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ~18.2.0
+        version: 18.2.0
       react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
+        specifier: ~18.2.0
+        version: 18.2.0(react@18.2.0)
       react-router-dom:
         specifier: ^6.22.3
-        version: 6.28.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 6.28.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -251,11 +245,11 @@ importers:
         specifier: workspace:*
         version: link:../../configs/ts
       '@types/react':
-        specifier: ^18.3.5
-        version: 18.3.12
+        specifier: ~18.2.0
+        version: 18.2.79
       '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.1
+        specifier: ~18.2.0
+        version: 18.2.25
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.3(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))
@@ -378,6 +372,52 @@ importers:
         specifier: workspace:*
         version: link:../unit-test
 
+  packages/render-bridge:
+    dependencies:
+      angular:
+        specifier: 1.8.3
+        version: 1.8.3
+      lodash.frompairs:
+        specifier: ^4.0.1
+        version: 4.0.1
+      ngcomponent:
+        specifier: ^4.1.0
+        version: 4.1.0
+      ngimport:
+        specifier: ^1.0.0
+        version: 1.0.0(angular@1.8.3)
+      react:
+        specifier: ~18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ~18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../configs/eslint
+      '@repo/ts-config':
+        specifier: workspace:*
+        version: link:../../configs/ts
+      '@repo/unit-test':
+        specifier: workspace:*
+        version: link:../unit-test
+      '@types/angular':
+        specifier: 1.8.9
+        version: 1.8.9
+      '@types/lodash.frompairs':
+        specifier: ^4.0.5
+        version: 4.0.9
+      '@types/react':
+        specifier: ~18.2.0
+        version: 18.2.79
+      '@types/react-dom':
+        specifier: ~18.2.0
+        version: 18.2.25
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+
   packages/result:
     devDependencies:
       '@repo/eslint-config':
@@ -434,10 +474,10 @@ importers:
         version: 8.3.4(storybook@8.3.4)
       '@storybook/addon-links':
         specifier: 8.3.4
-        version: 8.3.4(react@18.3.1)(storybook@8.3.4)
+        version: 8.3.4(react@18.2.0)(storybook@8.3.4)
       '@storybook/addon-onboarding':
         specifier: 8.3.4
-        version: 8.3.4(react@18.3.1)(storybook@8.3.4)
+        version: 8.3.4(react@18.2.0)(storybook@8.3.4)
       '@storybook/addon-styling-webpack':
         specifier: 1.0.0
         version: 1.0.0(storybook@8.3.4)(webpack@5.95.0(@swc/core@1.7.40)(esbuild@0.23.1))
@@ -446,16 +486,16 @@ importers:
         version: 8.3.4(storybook@8.3.4)
       '@storybook/blocks':
         specifier: 8.3.4
-        version: 8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)
+        version: 8.3.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)
       '@storybook/react':
         specifier: 8.3.4
-        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)
+        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)
       '@storybook/react-vite':
         specifier: 8.3.4
-        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.3)(storybook@8.3.4)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))(webpack-sources@3.2.3)
+        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.24.3)(storybook@8.3.4)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))(webpack-sources@3.2.3)
       '@storybook/react-webpack5':
         specifier: 8.3.4
-        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(@swc/core@1.7.40)(esbuild@0.23.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)
+        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(@swc/core@1.7.40)(esbuild@0.23.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)
       '@storybook/test':
         specifier: 8.3.4
         version: 8.3.4(storybook@8.3.4)
@@ -463,11 +503,11 @@ importers:
         specifier: ^8.1.1
         version: 8.1.1(postcss@8.4.47)(typescript@5.6.3)(webpack@5.95.0(@swc/core@1.7.40)(esbuild@0.23.1))
       react:
-        specifier: ^18.2.0
-        version: 18.3.1
+        specifier: ~18.2.0
+        version: 18.2.0
       react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
+        specifier: ~18.2.0
+        version: 18.2.0(react@18.2.0)
       storybook:
         specifier: 8.3.4
         version: 8.3.4
@@ -481,14 +521,14 @@ importers:
         specifier: workspace:*
         version: link:../date
       react:
-        specifier: ^18.2.0
-        version: 18.3.1
+        specifier: ~18.2.0
+        version: 18.2.0
       react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
+        specifier: ~18.2.0
+        version: 18.2.0(react@18.2.0)
       react-transition-group:
         specifier: ^4.4.5
-        version: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -504,7 +544,7 @@ importers:
         version: link:../unit-test
       '@storybook/react':
         specifier: 8.3.0
-        version: 8.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)
+        version: 8.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)
       '@types/react':
         specifier: ~18.2.0
         version: 18.2.79
@@ -1723,17 +1763,11 @@ packages:
   '@types/react-dom@18.2.25':
     resolution: {integrity: sha512-o/V48vf4MQh7juIKZU2QGDfli6p1+OOi5oXx36Hffpc9adsHeXjVp8rHuPkjd8VT8sOJ2Zp05HR7CdpGTIUFUA==}
 
-  '@types/react-dom@18.3.1':
-    resolution: {integrity: sha512-qW1Mfv8taImTthu4KoXgDfLuk4bydU6Q/TkADnDWWHwi4NX4BR+LWfTp2sVmTqRrsHvyDDTelgelxJ+SsejKKQ==}
-
   '@types/react-transition-group@4.4.11':
     resolution: {integrity: sha512-RM05tAniPZ5DZPzzNFP+DmrcOdD0efDUxMy3145oljWSl3x9ZV5vhme98gTxFrj2lhXvmGNnUiuDyJgY9IKkNA==}
 
   '@types/react@18.2.79':
     resolution: {integrity: sha512-RwGAGXPl9kSXwdNTafkOEuFrTBD5SA2B3iEB96xi8+xu5ddUa/cpvyVCSNn+asgLCTHkb5ZxN8gbuibYJi4s1w==}
-
-  '@types/react@18.3.12':
-    resolution: {integrity: sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==}
 
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
@@ -2051,16 +2085,6 @@ packages:
 
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
-
-  angular2react@3.0.2:
-    resolution: {integrity: sha512-2xV3LCV9Xtn2Q1rN2zAW4tZngAE1nzxDIyJ4OthXCJ0xpCOvMiHwb5xMYmEHMLUaJW3rRbQW1+7bujkjEuv6ag==}
-    peerDependencies:
-      '@types/angular': '>=1.5.0'
-      '@types/react': '>=15.0.0'
-      '@types/react-dom': '>=15.0.0'
-      angular: '>=1.5.0'
-      react: '>=15.0.0'
-      react-dom: '>=15.0.0'
 
   angular@1.8.3:
     resolution: {integrity: sha512-5qjkWIQQVsHj4Sb5TcEs4WZWpFeVFHXwxEBHUhrny41D8UrBAd6T/6nPPAsLngJCReIOqi95W3mxdveveutpZw==}
@@ -4349,11 +4373,6 @@ packages:
     peerDependencies:
       react: ^18.2.0
 
-  react-dom@18.3.1:
-    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
-    peerDependencies:
-      react: ^18.3.1
-
   react-element-to-jsx-string@15.0.0:
     resolution: {integrity: sha512-UDg4lXB6BzlobN60P8fHWVPX3Kyw8ORrTeBtClmIlGdkOOE+GYQSFvmEU5iLLpwp/6v42DINwNcwOhOLfQ//FQ==}
     peerDependencies:
@@ -4391,17 +4410,6 @@ packages:
     peerDependencies:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
-
-  react2angular@4.0.6:
-    resolution: {integrity: sha512-MDl2WRoTyu7Gyh4+FAIlmsM2mxIa/DjSz6G/d90L1tK8ZRubqVEayKF6IPyAruC5DMhGDVJ7tlAIcu/gMNDjXg==}
-    peerDependencies:
-      '@types/angular': '>=1.5'
-      '@types/prop-types': '>=15'
-      '@types/react': '>=16'
-      '@types/react-dom': '>=16'
-      prop-types: '>=15'
-      react: '>=15'
-      react-dom: '>=15'
 
   react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -5771,11 +5779,11 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@mdx-js/react@3.1.0(@types/react@18.2.79)(react@18.3.1)':
+  '@mdx-js/react@3.1.0(@types/react@18.2.79)(react@18.2.0)':
     dependencies:
       '@types/mdx': 2.0.13
       '@types/react': 18.2.79
-      react: 18.3.1
+      react: 18.2.0
 
   '@microsoft/tsdoc-config@0.16.2':
     dependencies:
@@ -5903,15 +5911,15 @@ snapshots:
 
   '@storybook/addon-docs@8.3.4(storybook@8.3.4)(webpack-sources@3.2.3)':
     dependencies:
-      '@mdx-js/react': 3.1.0(@types/react@18.2.79)(react@18.3.1)
-      '@storybook/blocks': 8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)
+      '@mdx-js/react': 3.1.0(@types/react@18.2.79)(react@18.2.0)
+      '@storybook/blocks': 8.3.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)
       '@storybook/csf-plugin': 8.3.4(storybook@8.3.4)(webpack-sources@3.2.3)
       '@storybook/global': 5.0.0
-      '@storybook/react-dom-shim': 8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)
+      '@storybook/react-dom-shim': 8.3.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)
       '@types/react': 18.2.79
       fs-extra: 11.2.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
       rehype-external-links: 3.0.0
       rehype-slug: 6.0.0
       storybook: 8.3.4
@@ -5949,14 +5957,14 @@ snapshots:
       storybook: 8.3.4
       ts-dedent: 2.2.0
 
-  '@storybook/addon-links@8.3.4(react@18.3.1)(storybook@8.3.4)':
+  '@storybook/addon-links@8.3.4(react@18.2.0)(storybook@8.3.4)':
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       storybook: 8.3.4
       ts-dedent: 2.2.0
     optionalDependencies:
-      react: 18.3.1
+      react: 18.2.0
 
   '@storybook/addon-measure@8.3.4(storybook@8.3.4)':
     dependencies:
@@ -5964,9 +5972,9 @@ snapshots:
       storybook: 8.3.4
       tiny-invariant: 1.3.3
 
-  '@storybook/addon-onboarding@8.3.4(react@18.3.1)(storybook@8.3.4)':
+  '@storybook/addon-onboarding@8.3.4(react@18.2.0)(storybook@8.3.4)':
     dependencies:
-      react-confetti: 6.1.0(react@18.3.1)
+      react-confetti: 6.1.0(react@18.2.0)
       storybook: 8.3.4
     transitivePeerDependencies:
       - react
@@ -5998,26 +6006,26 @@ snapshots:
       memoizerific: 1.11.3
       storybook: 8.3.4
 
-  '@storybook/blocks@8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)':
+  '@storybook/blocks@8.3.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)':
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@storybook/icons': 1.2.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@types/lodash': 4.17.13
       color-convert: 2.0.1
       dequal: 2.0.3
       lodash: 4.17.21
-      markdown-to-jsx: 7.5.0(react@18.3.1)
+      markdown-to-jsx: 7.5.0(react@18.2.0)
       memoizerific: 1.11.3
       polished: 4.3.1
-      react-colorful: 5.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-colorful: 5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       storybook: 8.3.4
       telejson: 7.2.0
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
     optionalDependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   '@storybook/builder-vite@8.3.4(storybook@8.3.4)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))(webpack-sources@3.2.3)':
     dependencies:
@@ -6125,10 +6133,10 @@ snapshots:
 
   '@storybook/global@5.0.0': {}
 
-  '@storybook/icons@1.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@storybook/icons@1.2.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   '@storybook/instrumenter@8.3.4(storybook@8.3.4)':
     dependencies:
@@ -6145,19 +6153,19 @@ snapshots:
     dependencies:
       storybook: 8.3.4
 
-  '@storybook/preset-react-webpack@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(@swc/core@1.7.40)(esbuild@0.23.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)':
+  '@storybook/preset-react-webpack@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(@swc/core@1.7.40)(esbuild@0.23.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)':
     dependencies:
       '@storybook/core-webpack': 8.3.4(storybook@8.3.4)
-      '@storybook/react': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)
+      '@storybook/react': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)
       '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@5.6.3)(webpack@5.95.0(@swc/core@1.7.40)(esbuild@0.23.1))
       '@types/node': 22.8.4
       '@types/semver': 7.5.8
       find-up: 5.0.0
       fs-extra: 11.2.0
       magic-string: 0.30.12
-      react: 18.3.1
+      react: 18.2.0
       react-docgen: 7.1.0
-      react-dom: 18.3.1(react@18.3.1)
+      react-dom: 18.2.0(react@18.2.0)
       resolve: 1.22.8
       semver: 7.6.3
       storybook: 8.3.4
@@ -6191,29 +6199,29 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@storybook/react-dom-shim@8.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)':
+  '@storybook/react-dom-shim@8.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)':
     dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
       storybook: 8.3.4
 
-  '@storybook/react-dom-shim@8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)':
+  '@storybook/react-dom-shim@8.3.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)':
     dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
       storybook: 8.3.4
 
-  '@storybook/react-vite@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.3)(storybook@8.3.4)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))(webpack-sources@3.2.3)':
+  '@storybook/react-vite@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.24.3)(storybook@8.3.4)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))(webpack-sources@3.2.3)':
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.0(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))
       '@rollup/pluginutils': 5.1.3(rollup@4.24.3)
       '@storybook/builder-vite': 8.3.4(storybook@8.3.4)(typescript@5.6.3)(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))(webpack-sources@3.2.3)
-      '@storybook/react': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)
+      '@storybook/react': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)
       find-up: 5.0.0
       magic-string: 0.30.12
-      react: 18.3.1
+      react: 18.2.0
       react-docgen: 7.1.0
-      react-dom: 18.3.1(react@18.3.1)
+      react-dom: 18.2.0(react@18.2.0)
       resolve: 1.22.8
       storybook: 8.3.4
       tsconfig-paths: 4.2.0
@@ -6227,14 +6235,14 @@ snapshots:
       - vite-plugin-glimmerx
       - webpack-sources
 
-  '@storybook/react-webpack5@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(@swc/core@1.7.40)(esbuild@0.23.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)':
+  '@storybook/react-webpack5@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(@swc/core@1.7.40)(esbuild@0.23.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)':
     dependencies:
       '@storybook/builder-webpack5': 8.3.4(@swc/core@1.7.40)(esbuild@0.23.1)(storybook@8.3.4)(typescript@5.6.3)
-      '@storybook/preset-react-webpack': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(@swc/core@1.7.40)(esbuild@0.23.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)
-      '@storybook/react': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)
+      '@storybook/preset-react-webpack': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(@swc/core@1.7.40)(esbuild@0.23.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)
+      '@storybook/react': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)
       '@types/node': 22.8.4
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
       storybook: 8.3.4
     optionalDependencies:
       typescript: 5.6.3
@@ -6247,13 +6255,13 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@storybook/react@8.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)':
+  '@storybook/react@8.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)':
     dependencies:
       '@storybook/components': 8.3.6(storybook@8.3.4)
       '@storybook/global': 5.0.0
       '@storybook/manager-api': 8.3.6(storybook@8.3.4)
       '@storybook/preview-api': 8.3.6(storybook@8.3.4)
-      '@storybook/react-dom-shim': 8.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)
+      '@storybook/react-dom-shim': 8.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)
       '@storybook/theming': 8.3.6(storybook@8.3.4)
       '@types/escodegen': 0.0.6
       '@types/estree': 0.0.51
@@ -6264,9 +6272,9 @@ snapshots:
       escodegen: 2.1.0
       html-tags: 3.3.1
       prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-element-to-jsx-string: 15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-element-to-jsx-string: 15.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       semver: 7.6.3
       storybook: 8.3.4
       ts-dedent: 2.2.0
@@ -6275,13 +6283,13 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.3
 
-  '@storybook/react@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)(typescript@5.6.3)':
+  '@storybook/react@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)(typescript@5.6.3)':
     dependencies:
       '@storybook/components': 8.3.6(storybook@8.3.4)
       '@storybook/global': 5.0.0
       '@storybook/manager-api': 8.3.6(storybook@8.3.4)
       '@storybook/preview-api': 8.3.6(storybook@8.3.4)
-      '@storybook/react-dom-shim': 8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)
+      '@storybook/react-dom-shim': 8.3.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.3.4)
       '@storybook/theming': 8.3.6(storybook@8.3.4)
       '@types/escodegen': 0.0.6
       '@types/estree': 0.0.51
@@ -6292,9 +6300,9 @@ snapshots:
       escodegen: 2.1.0
       html-tags: 3.3.1
       prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-element-to-jsx-string: 15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-element-to-jsx-string: 15.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       semver: 7.6.3
       storybook: 8.3.4
       ts-dedent: 2.2.0
@@ -6597,20 +6605,11 @@ snapshots:
     dependencies:
       '@types/react': 18.2.79
 
-  '@types/react-dom@18.3.1':
-    dependencies:
-      '@types/react': 18.3.12
-
   '@types/react-transition-group@4.4.11':
     dependencies:
       '@types/react': 18.2.79
 
   '@types/react@18.2.79':
-    dependencies:
-      '@types/prop-types': 15.7.13
-      csstype: 3.1.3
-
-  '@types/react@18.3.12':
     dependencies:
       '@types/prop-types': 15.7.13
       csstype: 3.1.3
@@ -7053,17 +7052,6 @@ snapshots:
       fast-uri: 3.0.3
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
-
-  angular2react@3.0.2(@types/angular@1.8.9)(@types/react-dom@18.2.25)(@types/react@18.2.79)(angular@1.8.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
-    dependencies:
-      '@types/angular': 1.8.9
-      '@types/react': 18.2.79
-      '@types/react-dom': 18.2.25
-      angular: 1.8.3
-      lodash.kebabcase: 4.1.1
-      ngimport: 1.0.0(angular@1.8.3)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
 
   angular@1.8.3: {}
 
@@ -8952,9 +8940,9 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@0.344.0(react@18.3.1):
+  lucide-react@0.344.0(react@18.2.0):
     dependencies:
-      react: 18.3.1
+      react: 18.2.0
 
   lz-string@1.5.0: {}
 
@@ -8974,9 +8962,9 @@ snapshots:
 
   map-or-similar@1.5.0: {}
 
-  markdown-to-jsx@7.5.0(react@18.3.1):
+  markdown-to-jsx@7.5.0(react@18.2.0):
     dependencies:
-      react: 18.3.1
+      react: 18.2.0
 
   media-typer@0.3.0: {}
 
@@ -9457,14 +9445,14 @@ snapshots:
       iconv-lite: 0.4.24
       unpipe: 1.0.0
 
-  react-colorful@5.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-colorful@5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
-  react-confetti@6.1.0(react@18.3.1):
+  react-confetti@6.1.0(react@18.2.0):
     dependencies:
-      react: 18.3.1
+      react: 18.2.0
       tween-functions: 1.2.0
 
   react-docgen-typescript@2.2.2(typescript@5.6.3):
@@ -9492,18 +9480,12 @@ snapshots:
       react: 18.2.0
       scheduler: 0.23.2
 
-  react-dom@18.3.1(react@18.3.1):
-    dependencies:
-      loose-envify: 1.4.0
-      react: 18.3.1
-      scheduler: 0.23.2
-
-  react-element-to-jsx-string@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-element-to-jsx-string@15.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@base2/pretty-print-object': 1.0.1
       is-plain-object: 5.0.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
       react-is: 18.1.0
 
   react-is@16.13.1: {}
@@ -9514,37 +9496,23 @@ snapshots:
 
   react-refresh@0.14.2: {}
 
-  react-router-dom@6.28.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router-dom@6.28.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@remix-run/router': 1.21.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-router: 6.28.0(react@18.3.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-router: 6.28.0(react@18.2.0)
 
-  react-router@6.28.0(react@18.3.1):
+  react-router@6.28.0(react@18.2.0):
     dependencies:
       '@remix-run/router': 1.21.0
-      react: 18.3.1
+      react: 18.2.0
 
-  react-transition-group@4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-transition-group@4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@babel/runtime': 7.26.0
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
-      prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  react2angular@4.0.6(@types/angular@1.8.9)(@types/prop-types@15.7.13)(@types/react-dom@18.2.25)(@types/react@18.2.79)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
-    dependencies:
-      '@types/angular': 1.8.9
-      '@types/lodash.frompairs': 4.0.9
-      '@types/prop-types': 15.7.13
-      '@types/react': 18.2.79
-      '@types/react-dom': 18.2.25
-      angular: 1.8.3
-      lodash.frompairs: 4.0.1
-      ngcomponent: 4.1.0
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)

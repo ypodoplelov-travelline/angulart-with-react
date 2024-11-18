@@ -1,4 +1,4 @@
-import { react2angular } from 'react2angular'
+import { react2angular } from '@repo/render-bridge'
 
 import { Three } from './three'
 

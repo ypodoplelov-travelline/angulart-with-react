@@ -15,6 +15,7 @@
     "clean:node_modules": "turbo run clean:node_modules && rimraf ./node_modules",
     "clean:reset:all": "git clean -fdx -e .",
     "dev": "turbo run dev --concurrency=25 --color",
+    "dev:web-client": "turbo run dev --concurrency=25 --filter=@repo/anguact... --color --env-mode=loose",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "lint-staged": "lint-staged",
