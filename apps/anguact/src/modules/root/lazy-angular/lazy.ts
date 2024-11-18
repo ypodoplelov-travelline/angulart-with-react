@@ -1,6 +1,6 @@
 import { angular2react } from 'angular2react'
 
-import { lazyInjector } from '@bf-client/root/lazy-injector'
+import { lazyInjector } from '@bf-client/lazy/lazy-injector'
 
 export const LazyAngular = {
   bindings: {

@@ -1,6 +1,6 @@
 import { angular2react } from '@repo/render-bridge'
 
-import { lazyInjector } from './root/lazy-injector'
+import { lazyInjector } from '@bf-client/lazy/lazy-injector'
 
 export const ThreeAngular = {
   bindings: {

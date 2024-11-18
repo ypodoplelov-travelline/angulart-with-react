@@ -5,9 +5,9 @@
 ```
 #App            Top level container
   MainPage           Angular component
-    Two         React component
-      Three     Angular component
-        Four    React component
+    LazyFive         React component
+      Seven     Angular component
+        Six    React component
 ```
 
 ## Running it

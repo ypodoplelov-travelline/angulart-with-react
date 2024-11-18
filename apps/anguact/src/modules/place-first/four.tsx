@@ -1,5 +1,7 @@
 import { react2angular } from '@repo/render-bridge'
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
+
+const LazyFive = lazy(() => import('@bf-client/place-second/lazy-five'))
 
 function LazyLoader() {
   const [isShowLazy, setShowLazy] = useState(false)
@@ -10,8 +12,14 @@ function LazyLoader() {
         onClick={() => {
           setShowLazy(!isShowLazy)
         }}
-      />
-      {!!isShowLazy && <div>loading...</div>}
+      >
+        load more components
+      </button>
+      {!!isShowLazy && (
+        <Suspense fallback={<>loading...</>}>
+          <LazyFive two={2} />
+        </Suspense>
+      )}
     </div>
   )
 }

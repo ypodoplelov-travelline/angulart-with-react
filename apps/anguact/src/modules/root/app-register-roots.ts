@@ -1,7 +1,7 @@
-import { FourAngular } from '@bf-client/four'
 import { MainPageAngular } from '@bf-client/main-page/main.page'
-import { ThreeAngular } from '@bf-client/three'
-import { TwoAngular } from '@bf-client/two'
+import { FourAngular } from '@bf-client/place-first/four'
+import { ThreeAngular } from '@bf-client/place-first/three'
+import { TwoAngular } from '@bf-client/place-first/two'
 
 import { app } from './app'
 

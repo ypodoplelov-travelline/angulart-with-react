@@ -1,9 +1,9 @@
 import angular from 'angular'
 
+import { lazyInjector } from '@bf-client/lazy/lazy-injector'
 import { app } from '@bf-client/root/app'
 
 import { appRegisterRoots } from './app-register-roots'
-import { lazyInjector } from './lazy-injector'
 import { renderReactWrapper } from './render-react-wrapper'
 
 export function renderApp() {
