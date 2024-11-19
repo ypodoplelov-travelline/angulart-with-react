@@ -1,3 +1,5 @@
+import { $injector as defaultInjector } from 'ngimport'
+
 /**
  * Angular2react needs an $injector, but it doesn't actually invoke $injector.get
  * until we invoke ReactDOM.render. We can take advantage of this to provide the
@@ -8,18 +10,17 @@
  */
 import type angular from 'angular'
 
-let $injector: angular.auto.IInjectorService
+let $injector: angular.auto.IInjectorService = defaultInjector
 
 export const lazyInjector = {
   get $injector() {
-    // @ts-expect-error
     return {
       get get() {
         return $injector.get
       },
     }
   },
-  set $injector(_$injector: angular.auto.IInjectorService) {
+  setInjector(_$injector: angular.auto.IInjectorService) {
     $injector = _$injector
   },
 }

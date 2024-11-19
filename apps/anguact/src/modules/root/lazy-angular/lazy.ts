@@ -1,7 +1,5 @@
 import { angular2react } from 'angular2react'
 
-import { lazyInjector } from '@bf-client/lazy/lazy-injector'
-
 export const LazyAngular = {
   bindings: {
     three: '<',
@@ -17,5 +15,4 @@ export const LazyAngular = {
 export const Three = angular2react<{ three: number }>(
   'threeAngular',
   LazyAngular,
-  lazyInjector.$injector,
 )

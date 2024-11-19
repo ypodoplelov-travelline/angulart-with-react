@@ -1,16 +1,12 @@
-import { angular2react } from '@repo/render-bridge'
+import '../place-first/two'
 
-import { lazyInjector } from '@bf-client/lazy/lazy-injector'
+import { angular2react } from '@repo/render-bridge'
 
 export const MainPageAngular = {
   template: `
-    one
+    one angular
     <two-angular two="2"></two-angular>
   `,
 }
 
-export const MainPage = angular2react(
-  'preMainPage',
-  MainPageAngular,
-  lazyInjector.$injector,
-)
+export const MainPage = angular2react('preMainPage', MainPageAngular)

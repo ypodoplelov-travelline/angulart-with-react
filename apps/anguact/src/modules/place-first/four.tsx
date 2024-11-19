@@ -27,10 +27,10 @@ function LazyLoader() {
 export function Four({ four }: { four: number }) {
   return (
     <div>
-      four: {four}
+      four react: {four}
       <LazyLoader />
     </div>
   )
 }
 
-export const FourAngular = react2angular(Four, ['four'])
+export const FourAngular = react2angular(Four, 'fourAngular', ['four'])

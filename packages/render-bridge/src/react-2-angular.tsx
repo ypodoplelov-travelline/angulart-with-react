@@ -4,6 +4,8 @@ import NgComponent from 'ngcomponent'
 import * as React from 'react'
 import { createRoot, type Root } from 'react-dom/client'
 
+import { lazy } from './lazy-app'
+
 /**
  * Wraps a React component in Angular. Returns a new Angular component.
  *
@@ -17,6 +19,7 @@ import { createRoot, type Root } from 'react-dom/client'
  */
 export function react2angular<Props extends {}>(
   Class: React.ComponentType<Props>,
+  componentName: string,
   bindingNames: (keyof Props)[] | null = null,
   injectNames: string[] = [],
 ): IComponentOptions {
@@ -25,7 +28,7 @@ export function react2angular<Props extends {}>(
     (Class.propTypes && (Object.keys(Class.propTypes) as (keyof Props)[])) ||
     []
 
-  return {
+  const res: IComponentOptions = {
     bindings: fromPairs(names.map((_) => [_, '<'])),
     controller: [
       '$element',
@@ -75,4 +78,8 @@ export function react2angular<Props extends {}>(
       },
     ],
   }
+
+  lazy.app.component(componentName, res)
+
+  return res
 }

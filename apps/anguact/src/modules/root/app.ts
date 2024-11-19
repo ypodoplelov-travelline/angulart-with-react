@@ -1,3 +1,7 @@
+import { setApp } from '@repo/render-bridge'
 import angular from 'angular'
 
-export const app = angular.module('Demo', [])
+const appMod = angular.module('Demo', [])
+setApp(appMod)
+
+export const app = appMod

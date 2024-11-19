@@ -1,13 +1,10 @@
-import { $injector as defaultInjector } from 'ngimport'
 import * as React from 'react'
 
-import type * as angular from 'angular'
+import { kebabCase } from './kebab-case'
+import { lazy } from './lazy-app'
+import { lazyInjector } from './lazy-injector'
 
-const kebabCase = (string: string) =>
-  string
-    .replace(/([a-z])([A-Z])/g, '$1-$2')
-    .replace(/[\s_]+/g, '-')
-    .toLowerCase()
+import type * as angular from 'angular'
 
 type Scope<Props> = {
   props: Props
@@ -42,9 +39,9 @@ type State<Props> = {
 export function angular2react<Props extends object>(
   componentName: string,
   component: angular.IComponentOptions,
-  $injector = defaultInjector,
+  $injector = lazyInjector.$injector,
 ): React.ComponentClass<Props> {
-  return class extends React.Component<Props, State<Props>> {
+  const res = class extends React.Component<Props, State<Props>> {
     state: State<Props> = {
       didInitialCompile: false,
     }
@@ -79,7 +76,8 @@ export function angular2react<Props extends object>(
           bindings[kebabCase(binding)] = `props.${binding}`
         }
       }
-      return React.createElement(kebabCase(componentName), {
+      const elementName = kebabCase(componentName)
+      return React.createElement(elementName, {
         ...bindings,
         ref: this.compile.bind(this),
       })
@@ -99,8 +97,10 @@ export function angular2react<Props extends object>(
       if (this.state.didInitialCompile || !this.state.scope) {
         return
       }
+      const $compile = $injector.get('$compile')
+      const compileEl = $compile(element)
 
-      $injector.get('$compile')(element)(this.state.scope)
+      compileEl(this.state.scope)
       this.digest()
       this.setState({ didInitialCompile: true })
     }
@@ -114,6 +114,9 @@ export function angular2react<Props extends object>(
       } catch (e) {}
     }
   }
+
+  lazy.app.component(componentName, component)
+  return res
 }
 
 /**
