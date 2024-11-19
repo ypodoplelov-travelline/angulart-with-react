@@ -18,6 +18,10 @@ export const lazyInjector = {
       get get() {
         return $injector.get
       },
+      loadNewModules(...args: Parameters<typeof $injector.loadNewModules>) {
+        if (!$injector) return
+        $injector.loadNewModules(...args)
+      },
     }
   },
   setInjector(_$injector: angular.auto.IInjectorService) {

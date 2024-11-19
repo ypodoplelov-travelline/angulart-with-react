@@ -1,6 +1,6 @@
 import { angular2react } from '@repo/render-bridge'
 
-export const SixAngular = {
+const SixAngular = angular2react<{ three: number }>('sixAngular', {
   bindings: {
     three: '<',
   },
@@ -10,15 +10,15 @@ export const SixAngular = {
       end
     </div>
   `,
-}
-
-const SixA = angular2react<{ three: number }>('sixAngular', SixAngular)
+})
 
 export function Six({ three }: { three: number }) {
   return (
-    <>
+    <div>
       six wrap
-      <SixA three={three} />
-    </>
+      <div>
+        <SixAngular three={three} />
+      </div>
+    </div>
   )
 }

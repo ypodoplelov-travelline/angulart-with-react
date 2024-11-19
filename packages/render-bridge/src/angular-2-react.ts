@@ -41,82 +41,95 @@ export function angular2react<Props extends object>(
   component: angular.IComponentOptions,
   $injector = lazyInjector.$injector,
 ): React.ComponentClass<Props> {
-  const res = class extends React.Component<Props, State<Props>> {
-    state: State<Props> = {
-      didInitialCompile: false,
-    }
-
-    constructor(props: Props) {
-      super(props)
-      const state: State<Props> = {
-        scope: Object.assign($injector.get('$rootScope').$new(true), {
-          props: writable(this.props),
-        }),
+  const res = {
+    [componentName]: class extends React.Component<Props, State<Props>> {
+      state: State<Props> = {
         didInitialCompile: false,
       }
-      this.state = state
-    }
 
-    componentWillUnmount() {
-      if (!this.state.scope) {
-        return
-      }
-      this.state.scope.$destroy()
-    }
+      constructor(props: Props) {
+        super(props)
 
-    shouldComponentUpdate(): boolean {
-      return false
-    }
-
-    // called only once to set up DOM, after componentWillMount
-    render() {
-      const bindings: Record<string, string> = {}
-      if (component.bindings) {
-        for (const binding in component.bindings) {
-          bindings[kebabCase(binding)] = `props.${binding}`
+        const rootScope = $injector.get('$rootScope').$new(true)
+        const state: State<Props> = {
+          scope: Object.assign(rootScope, {
+            props: writable(this.props),
+          }),
+          didInitialCompile: false,
         }
+        this.state = state
       }
-      const elementName = kebabCase(componentName)
-      return React.createElement(elementName, {
-        ...bindings,
-        ref: this.compile.bind(this),
-      })
-    }
 
-    // makes angular aware of changed props
-    // if we're not inside a digest cycle, kicks off a digest cycle before setting.
-    UNSAFE_componentWillReceiveProps(props: Props) {
-      if (!this.state.scope) {
-        return
+      componentWillUnmount() {
+        if (!this.state.scope) {
+          return
+        }
+        this.state.scope.$destroy()
       }
-      this.state.scope.props = writable(props)
-      this.digest()
-    }
 
-    private compile(element: HTMLElement) {
-      if (this.state.didInitialCompile || !this.state.scope) {
-        return
+      shouldComponentUpdate(): boolean {
+        return false
       }
-      const $compile = $injector.get('$compile')
-      const compileEl = $compile(element)
 
-      compileEl(this.state.scope)
-      this.digest()
-      this.setState({ didInitialCompile: true })
-    }
-
-    private digest() {
-      if (!this.state.scope) {
-        return
+      // called only once to set up DOM, after componentWillMount
+      render() {
+        const bindings: Record<string, string> = {}
+        if (component.bindings) {
+          for (const binding in component.bindings) {
+            bindings[kebabCase(binding)] = `props.${binding}`
+          }
+        }
+        const elementName = kebabCase(componentName)
+        return React.createElement(elementName, {
+          ...bindings,
+          ref: this.compile.bind(this),
+        })
       }
-      try {
-        this.state.scope.$digest()
-      } catch (e) {}
-    }
+
+      // makes angular aware of changed props
+      // if we're not inside a digest cycle, kicks off a digest cycle before setting.
+      UNSAFE_componentWillReceiveProps(props: Props) {
+        if (!this.state.scope) {
+          return
+        }
+        this.state.scope.props = writable(props)
+        this.digest()
+      }
+
+      private compile(element: HTMLElement) {
+        if (this.state.didInitialCompile || !this.state.scope) {
+          return
+        }
+
+        debugger
+        const $compile = $injector.get('$compile')
+        const compileEl = $compile(element)
+
+        const res = compileEl(this.state.scope)
+
+        console.log('res', res)
+        debugger
+
+        this.digest()
+        this.setState({ didInitialCompile: true })
+      }
+
+      private digest() {
+        if (!this.state.scope) {
+          return
+        }
+        try {
+          this.state.scope.$digest()
+        } catch (e) {}
+      }
+    },
   }
 
-  lazy.app.component(componentName, component)
-  return res
+  const angularComponent = lazy.app.component(componentName, component)
+
+  console.log(componentName, angularComponent)
+
+  return res[componentName]
 }
 
 /**

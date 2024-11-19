@@ -3,7 +3,7 @@ import { lazy, Suspense, useState } from 'react'
 
 const LazyFive = lazy(() => import('@bf-client/place-second/lazy-five'))
 
-function LazyLoader() {
+function LazyLoader({ four }: { four: number }) {
   const [isShowLazy, setShowLazy] = useState(false)
   return (
     <div>
@@ -17,7 +17,7 @@ function LazyLoader() {
       </button>
       {!!isShowLazy && (
         <Suspense fallback={<>loading...</>}>
-          <LazyFive two={2} />
+          <LazyFive two={four} />
         </Suspense>
       )}
     </div>
@@ -28,7 +28,7 @@ export function Four({ four }: { four: number }) {
   return (
     <div>
       four react: {four}
-      <LazyLoader />
+      <LazyLoader four={four} />
     </div>
   )
 }
