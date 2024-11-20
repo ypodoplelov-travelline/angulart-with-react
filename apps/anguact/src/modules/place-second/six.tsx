@@ -1,3 +1,5 @@
+import './seven'
+
 import { angular2react } from '@repo/render-bridge'
 
 const SixAngular = angular2react<{ three: number }>('sixAngular', {
@@ -7,7 +9,8 @@ const SixAngular = angular2react<{ three: number }>('sixAngular', {
   template: `
     <div>
       six angular: {{this.$ctrl.three}}
-      end
+      before end
+      <seven-angular two="this.$ctrl.three * 2"></seven-angular>
     </div>
   `,
 })

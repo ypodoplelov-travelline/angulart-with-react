@@ -11,6 +11,7 @@ import { $injector as defaultInjector } from 'ngimport'
 import type angular from 'angular'
 
 let $injector: angular.auto.IInjectorService = defaultInjector
+let $compileProvider: angular.ICompileProvider
 
 export const lazyInjector = {
   get $injector() {
@@ -18,13 +19,22 @@ export const lazyInjector = {
       get get() {
         return $injector.get
       },
-      loadNewModules(...args: Parameters<typeof $injector.loadNewModules>) {
-        if (!$injector) return
-        $injector.loadNewModules(...args)
-      },
+      // loadNewModules(...args: Parameters<typeof $injector.loadNewModules>) {
+      //   if (!$injector) return
+      //   $injector.loadNewModules(...args)
+      // },
     }
   },
-  setInjector(_$injector: angular.auto.IInjectorService) {
-    $injector = _$injector
+  get $compileProvider() {
+    return $compileProvider
+  },
+  get isReady(): boolean {
+    return !!$injector
+  },
+  setInjector(value: angular.auto.IInjectorService) {
+    $injector = value
+  },
+  setCompileProvider(value: angular.ICompileProvider) {
+    $compileProvider = value
   },
 }

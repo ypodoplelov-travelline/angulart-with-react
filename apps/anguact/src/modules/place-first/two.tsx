@@ -12,7 +12,7 @@ export function Two({ two }: { two: number }) {
         <input
           value={val}
           onChange={(e) => {
-            setValue(e.target.value)
+            setValue(e.target.value as unknown as number)
           }}
         />
         {val}

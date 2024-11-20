@@ -30,5 +30,3 @@ const app = angular.module('test', [])
 // }
 // },
 // )
-
-console.log('app', app)

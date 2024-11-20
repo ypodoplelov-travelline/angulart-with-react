@@ -5,6 +5,8 @@ import * as React from 'react'
 import { createRoot, type Root } from 'react-dom/client'
 
 import { lazy } from './lazy-app'
+import { lazyInjector } from './lazy-injector'
+import { registerAngularComponent } from './register-angular-component'
 
 /**
  * Wraps a React component in Angular. Returns a new Angular component.
@@ -79,7 +81,10 @@ export function react2angular<Props extends {}>(
     ],
   }
 
-  lazy.app.component(componentName, res)
+  registerAngularComponent({
+    component: res,
+    componentName,
+  })
 
   return res
 }

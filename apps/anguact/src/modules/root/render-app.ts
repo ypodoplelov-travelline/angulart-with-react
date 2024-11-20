@@ -10,11 +10,12 @@ import { renderReactWrapper } from './render-react-wrapper'
 export function renderApp() {
   app.run([
     '$injector',
-    function (_$injector: angular.auto.IInjectorService) {
-      lazyInjector.setInjector(_$injector)
+    function ($injector: angular.auto.IInjectorService) {
+      lazyInjector.setInjector($injector)
       renderReactWrapper()
     },
   ])
 
   angular.bootstrap(document.createElement('div'), ['Demo'])
+  // angular.reloadWithDebugInfo()
 }

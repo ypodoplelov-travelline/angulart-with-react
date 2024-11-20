@@ -3,6 +3,7 @@ import * as React from 'react'
 import { kebabCase } from './kebab-case'
 import { lazy } from './lazy-app'
 import { lazyInjector } from './lazy-injector'
+import { registerAngularComponent } from './register-angular-component'
 
 import type * as angular from 'angular'
 
@@ -101,14 +102,10 @@ export function angular2react<Props extends object>(
           return
         }
 
-        debugger
         const $compile = $injector.get('$compile')
         const compileEl = $compile(element)
 
         const res = compileEl(this.state.scope)
-
-        console.log('res', res)
-        debugger
 
         this.digest()
         this.setState({ didInitialCompile: true })
@@ -125,9 +122,10 @@ export function angular2react<Props extends object>(
     },
   }
 
-  const angularComponent = lazy.app.component(componentName, component)
-
-  console.log(componentName, angularComponent)
+  registerAngularComponent({
+    componentName,
+    component,
+  })
 
   return res[componentName]
 }
@@ -167,3 +165,18 @@ function writable<T extends object>(object: T): T {
   }
   return _object
 }
+
+// function runInvokeQueue(queue) {
+//   var i, ii
+//   for (i = 0, ii = queue.length; i < ii; i++) {
+//     var invokeArgs = queue[i],
+//       provider = lazyInjector.$injector.get(invokeArgs[0])
+//
+//     var invokeArgs = queue[i],
+//       provider = providerInjector.get(invokeArgs[0])
+//
+//     provider[invokeArgs[1]].apply(provider, invokeArgs[2])
+//
+//     provider[invokeArgs[1]].apply(provider, invokeArgs[2])
+//   }
+// }
