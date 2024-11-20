@@ -1,8 +1,16 @@
+import {
+  type IAttributes,
+  type IController,
+  type IDirectiveController,
+  type IDirectiveFactory,
+  type Injectable,
+  type IScope,
+} from 'angular'
 import * as React from 'react'
 
 import { kebabCase } from './kebab-case'
 import { lazyInjector } from './lazy-injector'
-import { registerAngularComponent } from './register-angular-component'
+import { registerAngularDirective } from './register-angular-directive'
 
 import type * as angular from 'angular'
 
@@ -14,6 +22,13 @@ type State<Props> = {
   didInitialCompile: boolean
   scope?: Scope<Props>
 }
+
+type DirectiveParams<
+  TScope extends IScope = IScope,
+  TElement extends JQLite = JQLite,
+  TAttributes extends IAttributes = IAttributes,
+  TController extends IDirectiveController = IController,
+> = Injectable<IDirectiveFactory<TScope, TElement, TAttributes, TController>>
 
 /**
  * Wraps an Angular component in React. Returns a new React component.
@@ -36,11 +51,18 @@ type State<Props> = {
  *   <Bar onChange={...} />
  *   ```
  */
-export function angular2react<Props extends object>(
+export function angular2reactDirective<Props extends object>(
   componentName: string,
-  component: angular.IComponentOptions,
+  scope: Record<string, string>,
+  component: DirectiveParams,
   $injector = lazyInjector.$injector,
 ): React.ComponentClass<Props> {
+  registerAngularDirective({
+    name: componentName,
+    // @ts-expect-error
+    directive: component,
+  })
+
   const res = {
     [componentName]: class extends React.Component<Props, State<Props>> {
       state: State<Props> = {
@@ -74,8 +96,8 @@ export function angular2react<Props extends object>(
       // called only once to set up DOM, after componentWillMount
       render() {
         const bindings: Record<string, string> = {}
-        if (component.bindings) {
-          for (const binding in component.bindings) {
+        if (scope) {
+          for (const binding in scope) {
             bindings[kebabCase(binding)] = `props.${binding}`
           }
         }
@@ -104,7 +126,7 @@ export function angular2react<Props extends object>(
         const $compile = $injector.get('$compile')
         const compileEl = $compile(element)
 
-        const res = compileEl(this.state.scope)
+        compileEl(this.state.scope)
 
         this.digest()
         this.setState({ didInitialCompile: true })
@@ -120,11 +142,6 @@ export function angular2react<Props extends object>(
       }
     },
   }
-
-  registerAngularComponent({
-    componentName,
-    component,
-  })
 
   return res[componentName]
 }
@@ -164,18 +181,3 @@ function writable<T extends object>(object: T): T {
   }
   return _object
 }
-
-// function runInvokeQueue(queue) {
-//   var i, ii
-//   for (i = 0, ii = queue.length; i < ii; i++) {
-//     var invokeArgs = queue[i],
-//       provider = lazyInjector.$injector.get(invokeArgs[0])
-//
-//     var invokeArgs = queue[i],
-//       provider = providerInjector.get(invokeArgs[0])
-//
-//     provider[invokeArgs[1]].apply(provider, invokeArgs[2])
-//
-//     provider[invokeArgs[1]].apply(provider, invokeArgs[2])
-//   }
-// }

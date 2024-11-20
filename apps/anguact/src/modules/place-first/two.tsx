@@ -1,6 +1,8 @@
 import { react2angular } from '@repo/render-bridge'
 import { useState } from 'react'
 
+import { SubDirective } from '@bf-client/place-first/sub/sub.directive'
+
 import { Three } from './three'
 
 export function Two({ two }: { two: number }) {
@@ -9,6 +11,7 @@ export function Two({ two }: { two: number }) {
     <div>
       two react: {two}
       <div>
+        <SubDirective name="pass test value" />
         <input
           value={val}
           onChange={(e) => {

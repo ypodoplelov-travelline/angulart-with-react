@@ -5,7 +5,7 @@ module.exports = {
   parserOptions: {
     project: true,
   },
-  ignorePatterns: ['index.html'],
+  ignorePatterns: ['index.html', '*.html'],
   overrides: [
     {
       files: ['**/*.config.ts', '**/*.page.tsx'],

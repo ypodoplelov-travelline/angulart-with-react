@@ -12,6 +12,12 @@
   },
   "types": ["vite/client"],
 
-  "include": ["src", "vite.config.ts", "tailwind.config.ts", "modules.d.ts"],
+  "include": [
+    "src",
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "modules.d.ts",
+    "html.d.ts"
+  ],
   "exclude": ["node_modules", ".cache"]
 }
