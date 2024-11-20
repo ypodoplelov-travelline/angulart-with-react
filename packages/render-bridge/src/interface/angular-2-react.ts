@@ -109,7 +109,7 @@ export function angular2react<Props extends object>(
         const $compile = $injector.get('$compile')
         const compileEl = $compile(element)
 
-        const res = compileEl(this.state.scope)
+        compileEl(this.state.scope)
 
         this.digest()
         this.setState({ didInitialCompile: true })

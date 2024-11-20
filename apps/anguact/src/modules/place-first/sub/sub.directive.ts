@@ -21,10 +21,7 @@ export const SubDirective = angular2react<{ name: string }>({
         scope: SCOPE,
         replace: true,
         template: html,
-        link: (scope: IIconScope, element: ng.IAugmentedJQuery): void => {
-          // Polyfill для IE
-          element[0].setAttribute('focusable', 'false')
-
+        link: (scope: IIconScope): void => {
           scope.displayName = scope.name
 
           const unwatch: Function = scope.$watch(

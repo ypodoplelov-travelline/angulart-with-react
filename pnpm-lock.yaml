@@ -377,12 +377,18 @@ importers:
       angular:
         specifier: 1.8.3
         version: 1.8.3
+      lodash.assign:
+        specifier: ^4.2.0
+        version: 4.2.0
       lodash.frompairs:
         specifier: ^4.0.1
         version: 4.0.1
-      ngcomponent:
-        specifier: ^4.1.0
-        version: 4.1.0
+      lodash.mapvalues:
+        specifier: ^4.6.0
+        version: 4.6.0
+      lodash.some:
+        specifier: ^4.6.0
+        version: 4.6.0
       ngimport:
         specifier: ^1.0.0
         version: 1.0.0(angular@1.8.3)
@@ -405,9 +411,18 @@ importers:
       '@types/angular':
         specifier: 1.8.9
         version: 1.8.9
+      '@types/lodash.assign':
+        specifier: ^4.2.0
+        version: 4.2.9
       '@types/lodash.frompairs':
         specifier: ^4.0.5
         version: 4.0.9
+      '@types/lodash.mapvalues':
+        specifier: ^4.2.0
+        version: 4.6.9
+      '@types/lodash.some':
+        specifier: ^4.2.0
+        version: 4.6.9
       '@types/react':
         specifier: ~18.2.0
         version: 18.2.79
@@ -1724,8 +1739,17 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
+  '@types/lodash.assign@4.2.9':
+    resolution: {integrity: sha512-3l+BitwbEV9O1Q2KcwGHsG3KFNHInLcYMvVhHTP0fBLmpmZMYjh4q5A/J8UygfdtZXr8wRIMgUydFIy5ysGRcA==}
+
   '@types/lodash.frompairs@4.0.9':
     resolution: {integrity: sha512-OZ7YqENr/kRqpDqXlU1RxGWSQ4Ha5gLFcz9v2OhxrrspHCeQ4PfC7SobvLJ8vCvftiEv7IEfZNpaLhHYkVB5SA==}
+
+  '@types/lodash.mapvalues@4.6.9':
+    resolution: {integrity: sha512-NyAIgUrI+nnr3VoJbiAlUfqBT2M/65mOCm+LerHgYE7lEyxXUAalZiMIL37GBnfg0QOMMBEPW4osdiMjsoEA4g==}
+
+  '@types/lodash.some@4.6.9':
+    resolution: {integrity: sha512-ns1kdADcRQeqVCgmbFs4cMSsfRisSpg0YGgTg9A3UsRcS30UbqQZ2cDKDkMqwP4qPaO3FAakobGnU+clulhnlA==}
 
   '@types/lodash@4.17.13':
     resolution: {integrity: sha512-lfx+dftrEZcdBPczf9d0Qv0x+j/rfNCMuC6OcfXmO8gkfeNAY88PgKUbvG56whcN23gc27yenwF6oJZXGFpYxg==}
@@ -3725,6 +3749,9 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
+  lodash.assign@4.2.0:
+    resolution: {integrity: sha512-hFuH8TY+Yji7Eja3mGiuAxBqLagejScbG8GbG0j6o9vzn0YL14My+ktnqtZgFTosKymC9/44wP6s7xyuLfnClw==}
+
   lodash.camelcase@4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
 
@@ -3740,11 +3767,17 @@ packages:
   lodash.kebabcase@4.1.1:
     resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
 
+  lodash.mapvalues@4.6.0:
+    resolution: {integrity: sha512-JPFqXFeZQ7BfS00H58kClY7SPVeHertPE0lNuCyZ26/XlN8TvakYD7b9bGyNmXbT/D3BbtPAAmq90gPWqLkxlQ==}
+
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
   lodash.snakecase@4.1.1:
     resolution: {integrity: sha512-QZ1d4xoBHYUeuouhEq3lk3Uq7ldgyFXGBhg04+oRLnIz8o9T65Eh+8YdroUwn846zchkA9yDsDl5CVVaV2nqYw==}
+
+  lodash.some@4.6.0:
+    resolution: {integrity: sha512-j7MJE+TuT51q9ggt4fSgVqro163BEFjAt3u97IqU+JA2DkWl80nFTrowzLpZ/BnpN7rrl0JA/593NAdd8p/scQ==}
 
   lodash.sortby@4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
@@ -3935,9 +3968,6 @@ packages:
 
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
-
-  ngcomponent@4.1.0:
-    resolution: {integrity: sha512-cGL3iVoqMWTpCfaIwgRKhdaGqiy2Z+CCG0cVfjlBvdqE8saj8xap9B4OTf+qwObxLVZmDTJPDgx3bN6Q/lZ7BQ==}
 
   ngimport@1.0.0:
     resolution: {integrity: sha512-FqlICnf63dPiZUayNacbQtD+ImBbuekCed+6eKq0l2sNQwZIhQBSWfjXerfCx9uBSvttsPPwNMtK6OcnjMFTQw==}
@@ -6571,7 +6601,19 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
+  '@types/lodash.assign@4.2.9':
+    dependencies:
+      '@types/lodash': 4.17.13
+
   '@types/lodash.frompairs@4.0.9':
+    dependencies:
+      '@types/lodash': 4.17.13
+
+  '@types/lodash.mapvalues@4.6.9':
+    dependencies:
+      '@types/lodash': 4.17.13
+
+  '@types/lodash.some@4.6.9':
     dependencies:
       '@types/lodash': 4.17.13
 
@@ -8894,6 +8936,8 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
+  lodash.assign@4.2.0: {}
+
   lodash.camelcase@4.3.0: {}
 
   lodash.castarray@4.4.0: {}
@@ -8904,9 +8948,13 @@ snapshots:
 
   lodash.kebabcase@4.1.1: {}
 
+  lodash.mapvalues@4.6.0: {}
+
   lodash.merge@4.6.2: {}
 
   lodash.snakecase@4.1.1: {}
+
+  lodash.some@4.6.0: {}
 
   lodash.sortby@4.7.0: {}
 
@@ -9050,13 +9098,6 @@ snapshots:
   negotiator@0.6.3: {}
 
   neo-async@2.6.2: {}
-
-  ngcomponent@4.1.0:
-    dependencies:
-      '@types/angular': 1.8.9
-      '@types/lodash': 4.17.13
-      angular: 1.8.3
-      lodash: 4.17.21
 
   ngimport@1.0.0(angular@1.8.3):
     dependencies:

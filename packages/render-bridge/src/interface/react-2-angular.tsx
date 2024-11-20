@@ -1,9 +1,9 @@
 import { type IAugmentedJQuery, type IComponentOptions } from 'angular'
 import fromPairs from 'lodash.frompairs'
-import NgComponent from 'ngcomponent'
 import * as React from 'react'
 import { createRoot, type Root } from 'react-dom/client'
 
+import { NgComponent } from '../infra/ng-component'
 import { registerAngularModule } from '../infra/register-angular-module'
 
 import { lazy } from './lazy-app'

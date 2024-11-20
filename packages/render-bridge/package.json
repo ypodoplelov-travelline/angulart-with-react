@@ -25,6 +25,9 @@
     "@types/react": "~18.2.0",
     "@types/react-dom": "~18.2.0",
     "@types/lodash.frompairs": "^4.0.5",
+    "@types/lodash.assign": "^4.2.0",
+    "@types/lodash.mapvalues": "^4.2.0",
+    "@types/lodash.some": "^4.2.0",
     "rimraf": "6.0.1"
   },
   "dependencies": {
@@ -33,6 +36,8 @@
     "react-dom": "~18.2.0",
     "ngimport": "^1.0.0",
     "lodash.frompairs": "^4.0.1",
-    "ngcomponent": "^4.1.0"
+    "lodash.assign": "^4.2.0",
+    "lodash.mapvalues": "^4.6.0",
+    "lodash.some": "^4.6.0"
   }
 }
