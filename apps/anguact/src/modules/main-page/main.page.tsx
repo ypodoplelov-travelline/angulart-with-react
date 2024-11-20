@@ -9,4 +9,7 @@ export const MainPageAngular = {
   `,
 }
 
-export const MainPage = angular2react('preMainPage', MainPageAngular)
+export const MainPage = angular2react({
+  name: 'preMainPage',
+  component: MainPageAngular,
+})

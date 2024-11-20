@@ -1,19 +1,15 @@
 import * as React from 'react'
 
-import { kebabCase } from './kebab-case'
+import {
+  type Angular2ReactArgs,
+  type AngularState,
+} from '../core/angular-2-react.args'
+import { getAngularParams } from '../infra/get-angular-params'
+import { kebabCase } from '../infra/kebab-case'
+import { registerAngularModule } from '../infra/register-angular-module'
+
+import { lazy } from './lazy-app'
 import { lazyInjector } from './lazy-injector'
-import { registerAngularComponent } from './register-angular-component'
-
-import type * as angular from 'angular'
-
-type Scope<Props> = {
-  props: Props
-} & angular.IScope
-
-type State<Props> = {
-  didInitialCompile: boolean
-  scope?: Scope<Props>
-}
 
 /**
  * Wraps an Angular component in React. Returns a new React component.
@@ -37,13 +33,22 @@ type State<Props> = {
  *   ```
  */
 export function angular2react<Props extends object>(
-  componentName: string,
-  component: angular.IComponentOptions,
-  $injector = lazyInjector.$injector,
+  params: Angular2ReactArgs<Props>,
 ): React.ComponentClass<Props> {
+  const { bindings: componentBindings, name: componentName } =
+    getAngularParams(params)
+
+  const module =
+    'directive' in params
+      ? lazy.app.directive(componentName, params.directive)
+      : lazy.app.component(componentName, params.component)
+
+  registerAngularModule(module)
+
+  const $injector = lazyInjector.$injector
   const res = {
-    [componentName]: class extends React.Component<Props, State<Props>> {
-      state: State<Props> = {
+    [componentName]: class extends React.Component<Props, AngularState<Props>> {
+      state: AngularState<Props> = {
         didInitialCompile: false,
       }
 
@@ -51,7 +56,7 @@ export function angular2react<Props extends object>(
         super(props)
 
         const rootScope = $injector.get('$rootScope').$new(true)
-        const state: State<Props> = {
+        const state: AngularState<Props> = {
           scope: Object.assign(rootScope, {
             props: writable(this.props),
           }),
@@ -74,8 +79,8 @@ export function angular2react<Props extends object>(
       // called only once to set up DOM, after componentWillMount
       render() {
         const bindings: Record<string, string> = {}
-        if (component.bindings) {
-          for (const binding in component.bindings) {
+        if (bindings) {
+          for (const binding in componentBindings) {
             bindings[kebabCase(binding)] = `props.${binding}`
           }
         }
@@ -120,11 +125,6 @@ export function angular2react<Props extends object>(
       }
     },
   }
-
-  registerAngularComponent({
-    componentName,
-    component,
-  })
 
   return res[componentName]
 }

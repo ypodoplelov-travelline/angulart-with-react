@@ -3,11 +3,13 @@ import './icon/icon.directive'
 
 import { angular2react } from '@repo/render-bridge'
 
-const SixAngular = angular2react<{ three: number }>('sixAngular', {
-  bindings: {
-    three: '<',
-  },
-  template: `
+const SixAngular = angular2react<{ three: number }>({
+  name: 'sixAngular',
+  component: {
+    bindings: {
+      three: '<',
+    },
+    template: `
     <div>
       six angular: {{this.$ctrl.three}}
       before end
@@ -15,6 +17,7 @@ const SixAngular = angular2react<{ three: number }>('sixAngular', {
       <seven-angular two="this.$ctrl.three * 2"></seven-angular>
     </div>
   `,
+  },
 })
 
 export function Six({ three }: { three: number }) {

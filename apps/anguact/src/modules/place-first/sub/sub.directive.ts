@@ -1,4 +1,4 @@
-import { angular2reactDirective } from '@repo/render-bridge'
+import { angular2react } from '@repo/render-bridge'
 
 import html from './sub.html?raw'
 
@@ -11,11 +11,10 @@ const SCOPE: _.Dictionary<string> = {
   name: '=',
 }
 
-export const SubDirective = angular2reactDirective<{ name: string }>(
-  'tlSub',
-  SCOPE,
-  [
-    // @ts-expect-error
+export const SubDirective = angular2react<{ name: string }>({
+  name: 'tlSub',
+  scope: SCOPE,
+  directive: [
     () => {
       return {
         restrict: 'EA',
@@ -42,4 +41,4 @@ export const SubDirective = angular2reactDirective<{ name: string }>(
       }
     },
   ],
-)
+})
