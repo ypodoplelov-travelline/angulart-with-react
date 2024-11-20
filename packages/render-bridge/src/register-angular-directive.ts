@@ -11,9 +11,6 @@ export function registerAngularDirective({
   directive: IDirectiveFactory
 }) {
   const instance = lazy.app.directive(name, directive)
-  const compile = lazyInjector.$compileProvider
-  console.log('compile', compile)
-  debugger
 
   // for initial start we don't need to run invoke queue
   if (!lazyInjector.isReady) return instance
