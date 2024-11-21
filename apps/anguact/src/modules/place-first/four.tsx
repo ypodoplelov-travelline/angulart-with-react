@@ -1,6 +1,8 @@
 import { react2angular } from '@repo/render-bridge'
 import { lazy, Suspense, useState } from 'react'
 
+import { SuspenseComponentLoader } from '@bf-client/system/ui/suspense-component-loader'
+
 const LazyFive = lazy(() => import('@bf-client/place-second/lazy-five'))
 
 function LazyLoader({ four }: { four: number }) {
@@ -16,9 +18,9 @@ function LazyLoader({ four }: { four: number }) {
         load more components
       </button>
       {!!isShowLazy && (
-        <Suspense fallback={<>loading...</>}>
+        <SuspenseComponentLoader>
           <LazyFive two={four} />
-        </Suspense>
+        </SuspenseComponentLoader>
       )}
     </div>
   )
