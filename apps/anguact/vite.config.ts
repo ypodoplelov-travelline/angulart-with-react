@@ -1,3 +1,5 @@
+// @ts-expect-error
+import htmlImport from '@ayatkyo/vite-plugin-html-import'
 import { env } from '@dotenv-run/core'
 import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'node:path'
@@ -30,6 +32,7 @@ const config = defineConfig({
     },
   },
   plugins: [
+    htmlImport(),
     inspect(),
     react(),
     visualizer({

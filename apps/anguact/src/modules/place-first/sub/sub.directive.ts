@@ -1,6 +1,6 @@
 import { angular2react } from '@repo/render-bridge'
 
-import html from './sub.html?raw'
+import html from './sub.html'
 
 type IIconScope = {
   name: string

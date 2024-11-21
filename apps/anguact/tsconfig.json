@@ -16,7 +16,7 @@
     "src",
     "vite.config.ts",
     "tailwind.config.ts",
-    "modules.d.ts",
+    "svg.d.ts",
     "html.d.ts"
   ],
   "exclude": ["node_modules", ".cache"]

@@ -67,7 +67,7 @@ export const Default: StoryFn<typeof Icon> = () => {
 }
 
 Default.args = {
-  name: 'Trash',
+  name: 'Plus',
 }
 
 export const SingleIcon: StoryFn<typeof Icon> = (args) => {
@@ -75,5 +75,5 @@ export const SingleIcon: StoryFn<typeof Icon> = (args) => {
 }
 
 SingleIcon.args = {
-  name: 'Trash',
+  name: 'Plus',
 }

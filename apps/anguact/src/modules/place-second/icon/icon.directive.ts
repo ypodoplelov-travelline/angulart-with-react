@@ -2,7 +2,7 @@ import '../just-place'
 
 import { angular2react } from '@repo/render-bridge'
 
-import html from './icon.html?raw'
+import html from './icon.html'
 
 type IIconScope = {
   name: string

@@ -18,7 +18,6 @@ export type Angular2ReactArgs<Props> =
     }
   | {
       name: string
-      // @ts-expect-error
       directive: DirectiveParams<any>
       scope: Partial<Props>
     }
