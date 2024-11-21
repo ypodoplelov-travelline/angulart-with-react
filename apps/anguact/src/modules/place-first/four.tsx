@@ -1,5 +1,5 @@
 import { react2angular } from '@repo/render-bridge'
-import { lazy, Suspense, useState } from 'react'
+import { lazy, useState } from 'react'
 
 import { SuspenseComponentLoader } from '@bf-client/system/ui/suspense-component-loader'
 

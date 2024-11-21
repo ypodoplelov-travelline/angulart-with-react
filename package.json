@@ -33,7 +33,6 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/ts-config": "workspace:*",
-    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20.16.2",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
