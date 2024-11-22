@@ -82,8 +82,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui-kit
       angular:
-        specifier: 1.8.3
-        version: 1.8.3
+        specifier: 1.7.3
+        version: 1.7.3
       react:
         specifier: ~18.2.0
         version: 18.2.0
@@ -378,8 +378,8 @@ importers:
   packages/render-bridge:
     dependencies:
       angular:
-        specifier: 1.8.3
-        version: 1.8.3
+        specifier: 1.7.3
+        version: 1.7.3
       lodash.assign:
         specifier: ^4.2.0
         version: 4.2.0
@@ -394,7 +394,7 @@ importers:
         version: 4.6.0
       ngimport:
         specifier: ^1.0.0
-        version: 1.0.0(angular@1.8.3)
+        version: 1.0.0(angular@1.7.3)
       react:
         specifier: ~18.2.0
         version: 18.2.0
@@ -2118,8 +2118,8 @@ packages:
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
 
-  angular@1.8.3:
-    resolution: {integrity: sha512-5qjkWIQQVsHj4Sb5TcEs4WZWpFeVFHXwxEBHUhrny41D8UrBAd6T/6nPPAsLngJCReIOqi95W3mxdveveutpZw==}
+  angular@1.7.3:
+    resolution: {integrity: sha512-hQRhU56shs72y88cS0Uy9g+UAMHoztJ3V+r+iF8o1AK/Bpu8ewmjFDk9j2LjSuN05a9mhxW1rOHnYKOwyTS/Zg==}
     deprecated: For the actively supported Angular, see https://www.npmjs.com/package/@angular/core. AngularJS support has officially ended. For extended AngularJS support options, see https://goo.gle/angularjs-path-forward.
 
   ansi-escapes@7.0.0:
@@ -7116,7 +7116,7 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
-  angular@1.8.3: {}
+  angular@1.7.3: {}
 
   ansi-escapes@7.0.0:
     dependencies:
@@ -9122,10 +9122,10 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  ngimport@1.0.0(angular@1.8.3):
+  ngimport@1.0.0(angular@1.7.3):
     dependencies:
       '@types/angular': 1.8.9
-      angular: 1.8.3
+      angular: 1.7.3
 
   no-case@3.0.4:
     dependencies:
